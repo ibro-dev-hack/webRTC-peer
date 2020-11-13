@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WebRTC</title>
+</head>
+
+<body>
+    <h1 style="text-align: center; color: crimson; font-size: 2.5rem;">Vidéo Conférence</h1>
+    <div class="select-room">
+        <label for="name"> Veuillez entrez le nom de la réunion</label>
+        <input type="text" name="name" id="roomNumber" placeholder="nom de la réunion">
+        <button id="goRoom">créer ou joindre la réunion</button>
+    </div>
+    <div id="consultingRoom" style="display: none;" class="video-container">
+        <h2 id="callName"></h2>
+        <p style="margin: 2rem auto;">
+            <input type="text" id="inputCallName" placeholder="Enter your name ">
+            <button id="setName">setName</button>
+        </p>
+        <video autoplay id="localVideo"></video>
+        <video id="remoteVideo" autoplay></video>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
